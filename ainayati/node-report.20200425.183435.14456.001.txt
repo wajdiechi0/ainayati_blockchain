@@ -1,0 +1,208 @@
+================================================================================
+==== Node Report ===============================================================
+
+Event: exception, location: "OnUncaughtException"
+Filename: node-report.20200425.183435.14456.001.txt
+Dump event time:  2020/04/25 18:34:35
+Module load time: 2020/04/25 18:34:35
+Process ID: 14456
+Command line: node /Users/wajdi/.nvm/versions/node/v8.9.4/bin/composer archive list -a
+
+Node.js version: v8.9.4
+(http_parser: 2.7.0, v8: 6.1.534.50, uv: 1.15.0, zlib: 1.2.11, ares: 1.10.1-DEV,
+ modules: 57, nghttp2: 1.25.0, openssl: 1.0.2n, icu: 59.1, unicode: 9.0,
+ cldr: 31.0.1, tz: 2017b)
+
+node-report version: 2.2.1 (built against Node.js v8.9.4, 64 bit)
+
+OS version: Darwin 19.4.0 Darwin Kernel Version 19.4.0: Wed Mar  4 22:28:40 PST 2020; root:xnu-6153.101.6~15/RELEASE_X86_64
+
+Machine: Wajdis-MacBook-Pro.local x86_64
+
+================================================================================
+==== JavaScript Stack Trace ====================================================
+
+Object.parseArgs [as _parseArgs] (/Users/wajdi/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.get [as argv] (/Users/wajdi/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.<anonymous> (/Users/wajdi/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/cli.js:1:1)
+Module._compile (module.js:1:1)
+Object.Module._extensions..js (module.js:1:1)
+Module.load (module.js:1:1)
+tryModuleLoad (module.js:1:1)
+Function.Module._load (module.js:1:1)
+Function.Module.runMain (module.js:1:1)
+startup (bootstrap_node.js:1:1)
+bootstrap_node.js:1:1
+
+================================================================================
+==== Native Stack Trace ========================================================
+
+ 0: [pc=0x10512c33a] nodereport::OnUncaughtException(v8::Isolate*) [/Users/wajdi/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/node-report/api.node]
+ 1: [pc=0x10064bb63] v8::internal::Isolate::Throw(v8::internal::Object*, v8::internal::MessageLocation*) [/Users/wajdi/.nvm/versions/node/v8.9.4/bin/node]
+ 2: [pc=0x1007f6bab] v8::internal::Runtime_Throw(int, v8::internal::Object**, v8::internal::Isolate*) [/Users/wajdi/.nvm/versions/node/v8.9.4/bin/node]
+ 3: [pc=0x2d7db420463d] 
+
+================================================================================
+==== JavaScript Heap and Garbage Collector =====================================
+
+Heap space name: new_space
+    Memory size: 33,554,432 bytes, committed memory: 17,024,832 bytes
+    Capacity: 16,498,688 bytes, used: 2,416,952 bytes, available: 14,081,736 bytes
+Heap space name: old_space
+    Memory size: 18,173,952 bytes, committed memory: 17,865,424 bytes
+    Capacity: 17,807,872 bytes, used: 17,557,576 bytes, available: 250,296 bytes
+Heap space name: code_space
+    Memory size: 2,097,152 bytes, committed memory: 1,373,248 bytes
+    Capacity: 1,307,712 bytes, used: 1,307,712 bytes, available: 0 bytes
+Heap space name: map_space
+    Memory size: 1,593,344 bytes, committed memory: 1,270,864 bytes
+    Capacity: 1,555,112 bytes, used: 1,236,048 bytes, available: 319,064 bytes
+Heap space name: large_object_space
+    Memory size: 2,928,640 bytes, committed memory: 2,928,640 bytes
+    Capacity: 1,443,980,448 bytes, used: 2,872,992 bytes, available: 1,441,107,456 bytes
+
+Total heap memory size: 58,347,520 bytes
+Total heap committed memory: 40,463,008 bytes
+Total used heap memory: 25,391,280 bytes
+Total available heap memory: 1,455,758,552 bytes
+
+Heap memory limit: 1,501,560,832
+
+================================================================================
+==== Resource Usage ============================================================
+
+Process total resource usage:
+  User mode CPU: 0.570500 secs
+  Kernel mode CPU: 0.084160 secs
+  Average CPU Consumption : 65.466%
+  Maximum resident set size: 63,321,407,488 bytes
+  Page faults: 37 (I/O required) 17645 (no I/O required)
+  Filesystem activity: 0 reads 0 writes
+
+================================================================================
+==== Node.js libuv Handle Summary ==============================================
+
+(Flags: R=Ref, A=Active)
+Flags  Type      Address             Details
+[-A]   async     0x0000000102405fc0  
+[--]   check     0x00007ffeefbfe4e0  
+[R-]   idle      0x00007ffeefbfe558  
+[--]   prepare   0x00007ffeefbfe668  
+[--]   check     0x00007ffeefbfe6e0  
+[R-]   timer     0x00007ffeefbfe5d0  repeat: 0, timeout in: 4298633723 ms
+[-A]   async     0x00000001015a0208  
+[-A]   async     0x0000000102308950  
+[-A]   async     0x000000010500a7a0  
+[R-]   timer     0x000000010500aa70  repeat: 0, timeout expired: 46796292 ms ago
+[R-]   tty       0x000000010500abc8  width: 165, height: 17, file descriptor: 10, write queue size: 0, writable
+[-A]   signal    0x000000010500ad70  signum: 28 (SIGWINCH)
+[R-]   tty       0x000000010500aec8  width: 165, height: 17, file descriptor: 12, write queue size: 0, writable
+[-A]   async     0x00000001023076d0  
+[-A]   async     0x0000000102704980  
+[-A]   async     0x00000001024122e0  
+[-A]   async     0x00000001024139c0  
+[-A]   async     0x00000001050092f0  
+[-A]   async     0x000000010271f750  
+[-A]   async     0x0000000102705340  
+[-A]   async     0x0000000102721050  
+[-A]   async     0x0000000105133f60  
+[-A]   async     0x00000001050094f0  
+
+================================================================================
+==== System Information ========================================================
+
+Environment variables
+  MANPATH=/Users/wajdi/.nvm/versions/node/v8.9.4/share/man:/usr/share/man:/usr/local/share/man:/opt/X11/share/man:/Library/Frameworks/Mono.framework/Versions/Current/share/man:/Library/Apple/usr/share/man:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/share/man:/Applications/Xcode.app/Contents/Developer/usr/share/man:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/share/man
+  TERM_PROGRAM=vscode
+  NVM_CD_FLAGS=
+  ANDROID_HOME=/Users/wajdi/Library/Android/sdk
+  TERM=xterm-256color
+  SHELL=/bin/bash
+  HADOOP_HOME=/usr/local/Cellar/hadoop/3.2.1/libexec
+  TMPDIR=/var/folders/kj/jfjxl2_x1l94hkr5vl1vc7n80000gn/T/
+  DOCKER_HOST=tcp://192.168.99.100:2376
+  TERM_PROGRAM_VERSION=1.44.2
+  OLDPWD=/Users/wajdi/Documents/ainayati_blockchain
+  NVM_DIR=/Users/wajdi/.nvm
+  USER=wajdi
+  DOCKER_MACHINE_NAME=default
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.EjJaeKpZF3/Listeners
+  __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0
+  DOCKER_TLS_VERIFY=1
+  PATH=/Users/wajdi/.nvm/versions/node/v8.9.4/bin:/usr/local/bin:/usr/local/sbin:/Users/wajdi/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/sbin:/Users/wajdi/.composer/vendor/bin:/Users/wajdi/Library/Android/sdk/emulator:/Users/wajdi/Library/Android/sdk/tools:/Users/wajdi/Library/Android/sdk/tools/bin:/Users/wajdi/Library/Android/sdk/platform-tools:/Users/wajdi/Library/Android/sdk/emulator:/Users/wajdi/Library/Android/sdk/tools:/Users/wajdi/Library/Android/sdk/tools/bin:/Users/wajdi/Library/Android/sdk/platform-tools
+  NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist
+  HIVE_HOME=/usr/local/Cellar/hive/3.1.2/libexec
+  PWD=/Users/wajdi/Documents/ainayati_blockchain/ainayati
+  LANG=en_US.UTF-8
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  DOCKER_CERT_PATH=/Users/wajdi/.docker/machine/machines/default
+  SHLVL=2
+  HOME=/Users/wajdi
+  LOGNAME=wajdi
+  NVM_BIN=/Users/wajdi/.nvm/versions/node/v8.9.4/bin
+  NVM_IOJS_ORG_MIRROR=https://iojs.org/dist
+  DISPLAY=/private/tmp/com.apple.launchd.WpUn8madds/org.macosforge.xquartz:0
+  COLORTERM=truecolor
+  _=/Users/wajdi/.nvm/versions/node/v8.9.4/bin/composer
+
+Resource limits                        soft limit      hard limit
+  core file size (blocks)                       0       unlimited
+  data seg size (kbytes)                unlimited       unlimited
+  file size (blocks)                    unlimited       unlimited
+  max locked memory (bytes)             unlimited       unlimited
+  max memory size (kbytes)              unlimited       unlimited
+  open files                                24576       unlimited
+  stack size (bytes)                      8388608        67104768
+  cpu time (seconds)                    unlimited       unlimited
+  max user processes                         2784            4176
+  virtual memory (kbytes)               unlimited       unlimited
+
+Loaded libraries
+  /Users/wajdi/.nvm/versions/node/v8.9.4/bin/node
+  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+  /usr/lib/libSystem.B.dylib
+  /usr/lib/libc++.1.dylib
+  /usr/lib/libobjc.A.dylib
+  /usr/lib/libfakelink.dylib
+  /usr/lib/libDiagnosticMessagesClient.dylib
+  /usr/lib/libicucore.A.dylib
+  /usr/lib/libz.1.dylib
+  /usr/lib/libc++abi.dylib
+  /usr/lib/system/libcache.dylib
+  /usr/lib/system/libcommonCrypto.dylib
+  /usr/lib/system/libcompiler_rt.dylib
+  /usr/lib/system/libcopyfile.dylib
+  /usr/lib/system/libcorecrypto.dylib
+  /usr/lib/system/libdispatch.dylib
+  /usr/lib/system/libdyld.dylib
+  /usr/lib/system/libkeymgr.dylib
+  /usr/lib/system/liblaunch.dylib
+  /usr/lib/system/libmacho.dylib
+  /usr/lib/system/libquarantine.dylib
+  /usr/lib/system/libremovefile.dylib
+  /usr/lib/system/libsystem_asl.dylib
+  /usr/lib/system/libsystem_blocks.dylib
+  /usr/lib/system/libsystem_c.dylib
+  /usr/lib/system/libsystem_configuration.dylib
+  /usr/lib/system/libsystem_coreservices.dylib
+  /usr/lib/system/libsystem_darwin.dylib
+  /usr/lib/system/libsystem_dnssd.dylib
+  /usr/lib/system/libsystem_featureflags.dylib
+  /usr/lib/system/libsystem_info.dylib
+  /usr/lib/system/libsystem_m.dylib
+  /usr/lib/system/libsystem_malloc.dylib
+  /usr/lib/system/libsystem_networkextension.dylib
+  /usr/lib/system/libsystem_notify.dylib
+  /usr/lib/system/libsystem_sandbox.dylib
+  /usr/lib/system/libsystem_secinit.dylib
+  /usr/lib/system/libsystem_kernel.dylib
+  /usr/lib/system/libsystem_platform.dylib
+  /usr/lib/system/libsystem_pthread.dylib
+  /usr/lib/system/libsystem_symptoms.dylib
+  /usr/lib/system/libsystem_trace.dylib
+  /usr/lib/system/libunwind.dylib
+  /usr/lib/system/libxpc.dylib
+  /Users/wajdi/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/node-report/api.node
+
+================================================================================
