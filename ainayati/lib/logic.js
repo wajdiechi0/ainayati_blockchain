@@ -14,6 +14,5 @@ async function createNewAppointment(appointment) {
     newApointment.doctor = appointment.doctor;
     newApointment.patient = appointment.patient;
     newApointment.date = appointment.date;
-    newApointment.description = appointment.description;
     await assetRegistry.add(newApointment)
 }
